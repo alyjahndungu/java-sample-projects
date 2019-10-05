@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html th="http://www.thymeleaf.org">
+<head>
+    <div replace="fragments/header :: header-css"/>
+</head>
+<body>
+<div replace="fragments/header :: header"/>
+<div class="container">
+    <div class="starter-template">
+        <h1>User page (Spring Security protected)</h1>
+        <h1 inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <form action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </div>
+</div>
+<!-- /.container -->
+<div replace="fragments/footer :: footer"/>
+</body>
+</html>

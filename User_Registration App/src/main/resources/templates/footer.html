@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      th="http://www.thymeleaf.org"
+      sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+</head>
+<body>
+<div fragment="footer">
+    <div class="container">
+        <footer>
+            <!-- this is footer -->
+            © 2019 Levine Systems.com
+            <span authorize="isAuthenticated()">
+| Logged user: <span authentication="name"></span> |
+Roles: <span authentication="principal.authorities"></span> |
+<a href="@{/logout}">Sign Out</a>
+</span>
+            <script type="text/javascript"
+                    src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </footer>
+    </div>
+
+</div>
+</body>
+</html>

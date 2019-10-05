@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf + Spring Security</title>
+    <div replace="/header :: header-css"/>
+</head>
+<body>
+<div replace="/header :: header"/>
+<div class="container">
+    <div class="starter-template">
+        <h1>Spring Boot Web Thymeleaf + Spring Security</h1>
+        <h2>1. Visit <a href="@{/admin}">Admin page</a></h2>
+        <h2>2. Visit <a href="@{/user}">User page</a></h2>
+        <h2>3. Visit <a href="@{/about}">Normal page</a></h2>
+    </div>
+</div>
+
+<!-- /.container -->
+<div replace="/footer :: footer"/>
+</body>
+</html>

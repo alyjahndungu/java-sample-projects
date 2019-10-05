@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html th="http://www.thymeleaf.org">
+<head>
+    <div replace="/header :: header-css"/>
+</head>
+<body>
+<div replace="/header :: header"/>
+<div class="container">
+    <div class="starter-template">
+        <h1>Administration</h1>
+        <h1 inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <form action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </div>
+</div>
+<!-- /.container -->
+<div replace="/footer :: footer"/>
+</body>
+</html>
